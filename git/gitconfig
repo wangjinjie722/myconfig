@@ -31,3 +31,5 @@
 	template = ~/.gitmessage
 [pager]
 	branch = false
+[credential]
+	helper = store
