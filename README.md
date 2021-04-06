@@ -68,8 +68,27 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # install iterm2 theme: https://draculatheme.com/iterm/
+
+# 显示隐藏文件
+defaults write com.apple.finder AppleShowAllFiles TRUE
 ```
+
 
 # 注意：
 
 - 如果 oh-my-zsh 使用 powerlevel10k 之类的特殊主题，注意需要安装 nerd font 之类的特殊字体显示图标
+
+
+# 配置neovim
+```
+mkdir ~/.config
+cp -r ./nvim ~/.config/
+cd ~/.config/nvim
+ln -s ~/.config/nvim ~/.vim  # For "regular" Vim
+
+```
+
+# 配置tmux
+```
+cp ./mac/tmux ~/.tmux.conf
+```
