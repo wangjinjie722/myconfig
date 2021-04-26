@@ -80,13 +80,35 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 
 
 # 配置neovim
-```
+
+**_1._** Let's clone this repo! Clone to `~/.config/nvim`,
+we'll also symlink it for regular Vim:
+
+```bash
 mkdir ~/.config
 cp -r ./nvim ~/.config/
 cd ~/.config/nvim
 ln -s ~/.config/nvim ~/.vim  # For "regular" Vim
 
 ```
+
+**_2._** Install the Python 3 `pynvim` library. This is also needed for Vim 8
+if you want to use Denite and Defx.
+
+> Neovim: `./venv.sh` or `pip3 install --user pynvim`
+
+> Vim: `pip3 install --user pynvim`
+
+**_3._** Run `make test` to test your nvim/vim version and capabilities.
+
+**_4._** Run `make` to install all plugins.
+
+**_5._** If you are experiencing problems, run and read `nvim -c checkhealth`
+
+Test Python 3 availability with `:py3 print(sys.version_info)`
+
+Enjoy! :smile:
+
 
 # 配置tmux
 ```
